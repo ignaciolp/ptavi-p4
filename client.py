@@ -13,12 +13,12 @@ try:
     SERVER = sys.argv[1]
     PORT = sys.argv[2]
     METODO = sys.argv[3]
-    USU = sys.argv[4]
+    US = sys.argv[4]
     CADUCA = sys.argv[5]
 except:
     sys.exit("Usage: client.py ip puerto register sip_address expires_value")
-    
-LINE = ("REGISTER sip: " + USU + "SIP/2.0\r\n Exipires: " + CADUCA + "\r\n\r\n")
+
+LINE = ("REGISTER sip: " + US + "SIP/2.0\r\n Exipires: " + CADUCA + "\r\n\r\n")
 
 # Creamos el socket, lo configuramos y lo atamos a un servidor/puerto
 with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as my_socket:
